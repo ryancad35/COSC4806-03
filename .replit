@@ -23,4 +23,4 @@ mode = "sequential"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "php -S 0.0.0.0:8000 -t ."
+args = "php -S 0.0.0.0:8000 -t public"
