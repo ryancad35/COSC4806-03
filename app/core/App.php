@@ -21,7 +21,7 @@ class App {
          * if not, then go to this->controller which is defaulted to home 
          */
 
-        if (isset($url[1]) && file_exists('app/controllers/' . $url[1] . '.php')) {
+        if (file_exists('app/controllers/' . $url[1] . '.php')) {
             $this->controller = $url[1];
 
             $_SESSION['controller'] = $this->controller;
@@ -65,10 +65,6 @@ class App {
         //trims the trailing forward slash (rtrim), sanitizes URL, explode it by forward slash to get elements
         $url = explode('/', filter_var(rtrim($u, '/'), FILTER_SANITIZE_URL));
 		unset($url[0]);
-		// Handle root URL case
-		if (empty($url) || (count($url) == 1 && empty($url[1]))) {
-		    $url = [];
-		}
 		return $url;
     }
 }
