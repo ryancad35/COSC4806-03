@@ -3,7 +3,12 @@
 class Login extends Controller {
 
     public function index() {		
-	    $this->view('login/index');
+		$loginError = '';
+		if (isset($_SESSION['failedAttempts'])) {
+			$loginError = 'This is unsuccessful attempt number ' . $_SESSION['failedAttempts'];
+		}
+
+		$this->view('login/index', ['loginError' => $loginError]);
     }
     
 	public function verify()

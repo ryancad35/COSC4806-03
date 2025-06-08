@@ -24,6 +24,11 @@
 		    <button type="submit" class="btn btn-primary">Login</button>
 		</fieldset>
 		</form> 
+		<br>
+		<?php if (!empty($loginError)): ?>
+			<div class="alert alert-danger"><?= $loginError ?></div>
+		<?php endif; ?>
+		<p>Don't have an account? <a href="register.php">Click here to sign up!</a></p>
 	</div>
 </div>
     <?php require_once 'app/views/templates/footer.php' ?>
