@@ -34,7 +34,7 @@ class Login extends Controller {
 	
 			if ($user !== null) {
 				// Login successful
-				$_SESSION['authenticated'] = true;
+				$_SESSION['auth'] = true;
 				$_SESSION['username']      = $user['username'];
 	
 				if (isset($_SESSION['loginSuccess'])) {
