@@ -67,5 +67,4 @@ class App {
 		unset($url[0]);
 		return $url;
     }
-
 }

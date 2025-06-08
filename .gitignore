@@ -7,6 +7,10 @@ composer.phar
 /vendor/*
 /config/app.php
 
+/core/config.php
+*/config.php/*
+/config.php
+
 /tmp/cache/models/*
 !/tmp/cache/models/empty
 /tmp/cache/persistent/*
